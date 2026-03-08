@@ -1,4 +1,4 @@
-package linked_list.questions;
+package linked_list;
 
 import linked_list.base.LinkedListUtils;
 import linked_list.base.Node;

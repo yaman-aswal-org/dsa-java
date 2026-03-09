@@ -2,13 +2,14 @@ package arrays;
 
 import arrays.base.ArraysUtils;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class ArraysEasyQuestions {
 
     public static void main(String[] args) {
         int[] arr = ArraysUtils.generateIntArray();
-        concatenationOfArray(arr);
+        twoSums(arr, 6);
     }
 
     private static void findAnElementInAnArray(int[] arr, int target) {
@@ -87,8 +88,28 @@ public class ArraysEasyQuestions {
     /* Given an array of integers nums and an integer target,
     return the indices i and j such that nums[i] + nums[j] == target and i != j.*/
     private static void twoSums(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        boolean isFindSum = false;
 
+        for (int i = 0; i < nums.length; i++) {
+            int value = target - nums[i];
+
+            if (map.containsKey(value)) {
+                System.out.println("Position: " + map.get(value) + "," + i);
+                isFindSum = true;
+                break;
+            } else {
+                map.put(nums[i], i);
+            }
+
+        }
+
+        if (!isFindSum) {
+            System.out.println("No Sum == target..");
+        }
     }
+
+
 
 
 }

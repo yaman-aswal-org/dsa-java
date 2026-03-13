@@ -9,7 +9,9 @@ public class ArraysEasyQuestions {
 
     public static void main(String[] args) {
         int[] arr = ArraysUtils.generateIntArray();
-        twoSums(arr, 6);
+//        twoSums(arr, 6);
+        int[] a = sortedSquares(arr);
+        ArraysUtils.printArray(a);
     }
 
     private static void findAnElementInAnArray(int[] arr, int target) {
@@ -109,7 +111,67 @@ public class ArraysEasyQuestions {
         }
     }
 
+    public static int[] sortedSquares(int[] nums) {
+        int pos = -1;
+        int neg = -1;
+        int[] ans = new int[nums.length];
 
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < 0) {
+                neg = i;
+            } else {
+                pos = i;
+                break;
+            }
+        }
+
+        int i = 0;
+
+        if (neg == -1) {
+            for (int x = 0; x < nums.length; x++) {
+                ans[i] = nums[x] * nums[x];
+                i++;
+            }
+        } else if (pos == -1) {
+            for (int x = nums.length - 1; x >= 0; x--) {
+                ans[i] = nums[x] * nums[x];
+                i++;
+            }
+        } else {
+
+            while (pos < nums.length && neg >= 0) {
+                int posValue = nums[pos] * nums[pos];
+                int negValue = nums[neg] * nums[neg];
+
+                if (posValue <= negValue) {
+                    ans[i] = posValue;
+                    pos++;
+                } else {
+                    ans[i] = negValue;
+                    neg--;
+                }
+
+                i++;
+            }
+
+            while (pos < nums.length) {
+                int posValue = nums[pos] * nums[pos];
+                ans[i] = posValue;
+                pos++;
+                i++;
+            }
+
+            while (neg >= 0) {
+                int negValue = nums[neg] * nums[neg];
+                ans[i] = negValue;
+                neg--;
+                i++;
+            }
+
+        }
+
+        return ans;
+    }
 
 
 }

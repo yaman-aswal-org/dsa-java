@@ -1,4 +1,4 @@
-package arrays.base;
+package dsa_patterns.utils;
 
 import java.util.Scanner;
 
@@ -62,6 +62,12 @@ public class ArraysUtils {
         }
 
         return arr;
+    }
+
+    public static void swapTwoNumbers(int[] nums, int left, int mid){
+        int temp = nums[left];
+        nums[left] = nums[mid];
+        nums[mid] = temp;
     }
 
 

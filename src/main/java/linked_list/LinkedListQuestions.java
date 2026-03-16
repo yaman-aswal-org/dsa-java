@@ -1,7 +1,7 @@
 package linked_list;
 
-import linked_list.base.LinkedListUtils;
-import linked_list.base.Node;
+import dsa_patterns.utils.LinkedListUtils;
+import dsa_patterns.utils.Node;
 
 import java.util.ArrayList;
 

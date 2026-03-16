@@ -1,6 +1,6 @@
 package arrays;
 
-import arrays.base.ArraysUtils;
+import dsa_patterns.utils.ArraysUtils;
 
 public class ArraysMediumQuestions {
 

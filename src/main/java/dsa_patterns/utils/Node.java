@@ -1,7 +1,7 @@
-package linked_list.base;
+package dsa_patterns.utils;
 
 public class Node<T> {
-    T data;
+    public T data;
     public Node<T> next;
 
     public Node(T data, Node<T> next) {

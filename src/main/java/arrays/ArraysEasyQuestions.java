@@ -1,8 +1,7 @@
 package arrays;
 
-import arrays.base.ArraysUtils;
+import dsa_patterns.utils.ArraysUtils;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 public class ArraysEasyQuestions {

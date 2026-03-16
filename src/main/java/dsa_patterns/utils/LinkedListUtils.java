@@ -1,4 +1,4 @@
-package linked_list.base;
+package dsa_patterns.utils;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package linked_list;
+package dsa_patterns;
 
 import dsa_patterns.utils.LinkedListUtils;
 import dsa_patterns.utils.Node;
@@ -30,13 +30,8 @@ public class LinkedListQuestions {
 
 
     public static void main(String[] args) {
-
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("1");
-        list.add("2");
-        list.add("3");
-        list.add("4");
-        Node<String> head = LinkedListUtils.createListStr(list);
+        String[] nums = new String[]{"1", "4", "4"};
+        Node<String> head = LinkedListUtils.createListStr(nums);
         head = LinkedListQuestions.reverseALinkedList(head);
         LinkedListUtils.printListStr(head);
     }

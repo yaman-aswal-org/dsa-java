@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class LinkedListUtils {
 
-    public static void printListInt(Node<Integer> node){
+    public static void printListInt(Node<Integer> node) {
 
-        while (node != null){
+        while (node != null) {
             System.out.print(node.data + " -> ");
             node = node.next;
         }
@@ -14,10 +14,10 @@ public class LinkedListUtils {
         System.out.println();
     }
 
-    public static void printListStr(Node<String> node){
+    public static void printListStr(Node<String> node) {
 
-        while (node != null){
-            if (node.next != null){
+        while (node != null) {
+            if (node.next != null) {
                 System.out.print(" -> ");
             }
             node = node.next;
@@ -26,39 +26,50 @@ public class LinkedListUtils {
         System.out.println();
     }
 
-    public static Node<Integer> createListInt(ArrayList<Integer> list){
+    public static Node<Integer> createListInt(int[] list) {
 
-        if (list == null || list.isEmpty()) {
+        if (list == null || list.length == 0) {
             return null;
         }
 
-        Node<Integer> head = new Node<>(list.get(0), null);
+        Node<Integer> head = new Node<>(list[0], null);
         Node<Integer> current = head;
 
-        for (int i = 1; i < list.size(); i++) {
-            Integer data = list.get(i);
-            current.next = new Node<Integer>(data, null);
+        for (int i = 1; i < list.length; i++) {
+            Integer data = list[0];
+            current.next = new Node<>(data, null);
             current = current.next;
         }
 
         return head;
     }
 
-    public static Node<String> createListStr(ArrayList<String> list){
+    public static Node<String> createListStr(String[] list) {
 
-        if (list == null || list.isEmpty()) {
+        if (list == null || list.length == 0) {
             return null;
         }
 
-        Node<String> head = new Node<>(list.get(0), null);
+        Node<String> head = new Node<>(list[0], null);
         Node<String> current = head;
 
-        for (int i = 1; i < list.size(); i++) {
-            String data = list.get(i);
-            current.next = new Node<String>(data, null);
+        for (int i = 1; i < list.length; i++) {
+            String data = list[i];
+            current.next = new Node<>(data, null);
             current = current.next;
         }
 
+        return head;
+    }
+
+    private static Node<String> insertNodeStrAtStart(Node<String> head, String data) {
+        if (head == null) {
+            return null;
+        }
+
+        Node<String> newNode = new Node<>(data, null);
+        newNode.next = head;
+        head = newNode;
         return head;
     }
 

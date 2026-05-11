@@ -2,7 +2,7 @@ package dsa_patterns;
 
 import java.util.HashMap;
 
-public class G_HashmapPatterns {
+public class _7_HashmapPatterns {
 
 
     /**

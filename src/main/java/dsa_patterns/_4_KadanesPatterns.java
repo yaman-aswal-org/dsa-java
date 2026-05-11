@@ -1,6 +1,6 @@
 package dsa_patterns;
 
-public class D_KadanesPatterns {
+public class _4_KadanesPatterns {
 
     public static void main(String[] args) {
         int[] nums = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};

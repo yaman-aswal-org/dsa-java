@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class A_TwoPointersPatterns {
+public class _1_TwoPointersPatterns {
 
     public static void main(String[] args) {
 //        int[] arr = ArraysUtils.generateIntArray();

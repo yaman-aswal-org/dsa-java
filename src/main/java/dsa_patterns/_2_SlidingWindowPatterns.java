@@ -2,7 +2,7 @@ package dsa_patterns;
 
 import java.util.HashMap;
 
-public class B_SlidingWindowPatterns {
+public class _2_SlidingWindowPatterns {
 
     public static void main(String[] args) {
         int[] nums = new int[]{1, 4, 4};

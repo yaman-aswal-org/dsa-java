@@ -5,7 +5,7 @@ import dsa_patterns.utils.Node;
 
 import static dsa_patterns.utils.BasicUtils.sumOfSquaresOfDigits;
 
-public class C_SlowFastPointersPatterns {
+public class _3_SlowFastPointersPatterns {
 
     public static void main(String[] args) {
         int[] nums = new int[]{1, 4, 4};

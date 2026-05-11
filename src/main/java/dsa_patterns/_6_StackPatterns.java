@@ -2,7 +2,7 @@ package dsa_patterns;
 
 import java.util.Stack;
 
-public class F_StackPatterns {
+public class _6_StackPatterns {
 
     public static void main(String[] args) {
         String s = "abbaca";

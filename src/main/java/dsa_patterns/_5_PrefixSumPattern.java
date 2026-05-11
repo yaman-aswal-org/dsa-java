@@ -2,7 +2,7 @@ package dsa_patterns;
 
 import java.util.HashMap;
 
-public class E_PrefixSumPattern {
+public class _5_PrefixSumPattern {
 
     public static void main(String[] args) {
 

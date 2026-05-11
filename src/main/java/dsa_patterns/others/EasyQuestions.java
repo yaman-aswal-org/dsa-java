@@ -1,4 +1,4 @@
-package dsa_patterns;
+package dsa_patterns.others;
 
 import dsa_patterns.utils.ArraysUtils;
 

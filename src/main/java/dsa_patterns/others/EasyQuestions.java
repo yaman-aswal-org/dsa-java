@@ -4,6 +4,7 @@ import dsa_patterns.utils.ArraysUtils;
 
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class EasyQuestions {
 
@@ -348,6 +349,34 @@ public class EasyQuestions {
         System.out.println(rotate);
 
         sc.close();
+    }
+
+
+    public boolean backspaceCompare(String s, String t) {
+        Stack<Character> st1 = new Stack<>();
+        Stack<Character> st2 = new Stack<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if (ch == '#') {
+                st1.pop();
+            } else {
+                st1.push(ch);
+            }
+        }
+
+        for (int i = 0; i < t.length(); i++) {
+            char ch = t.charAt(i);
+            if (ch == '#') {
+                st2.pop();
+            } else {
+                st2.push(ch);
+            }
+        }
+
+        return st1.size() == st2.size();
+
     }
 
 }
